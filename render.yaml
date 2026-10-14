@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: tankx-247-cloud-server
+    env: node
+    plan: free
+    buildCommand: npm install && npm --prefix client install && npm --prefix client run build
+    startCommand: node server/index.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3000
+      - key: MONGODB_URI
+        sync: false
+      - key: ADMIN_EMAIL
+        value: tankx231@gmail.com
+      - key: ADMIN_PHONE
+        value: "+91 77949 48384"
+      - key: JWT_SECRET
+        generateValue: true

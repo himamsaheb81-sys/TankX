@@ -1,0 +1,28 @@
+> tankx-frontend@1.0.0 prebuild
+> node -e "const fs=require('fs'); if(fs.existsSync('.next')) fs.rmSync('.next', {recursive:true, force:true});"
+
+> tankx-frontend@1.0.0 build
+> next build
+
+  ▲ Next.js 14.2.35
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully
+   Linting and checking validity of types ...
+   Collecting page data ...
+ ✓ Generating static pages (5/5)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                              Size     First Load JS
+┌ ○ /                                    204 kB          291 kB
+├ ○ /_not-found                          876 B          88.4 kB
+└ ○ /icon.png                            0 B                0 B
++ First Load JS shared by all            87.5 kB
+  ├ chunks/117-a1164beebc333298.js       31.9 kB
+  ├ chunks/fd9d1056-83811740eb3c2b2a.js  53.6 kB
+  └ other shared chunks (total)          2 kB
+
+○  (Static)  prerendered as static content
+
+Build succeeded with exit code 0.

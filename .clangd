@@ -1,0 +1,9 @@
+Diagnostics:
+  Suppress: ["*"]
+  UnusedIncludes: None
+CompileFlags:
+  Add:
+    - "-Wno-everything"
+    - "-DARDUINO=10812"
+    - "-DESP32"
+    - "-DARDUINO_ARCH_ESP32"

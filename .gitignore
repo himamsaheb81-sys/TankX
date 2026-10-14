@@ -1,0 +1,72 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Environment variables & secrets
+.env
+.env.*
+!.env.example
+*.env
+firebase-service-account.json
+google-services.json
+serviceAccountKey.json
+*.pem
+*.key
+*.cert
+*.crt
+id_rsa
+id_ed25519
+
+# Build and Production outputs
+.next/
+dist/
+build/
+out/
+coverage/
+*.tsbuildinfo
+next-env.d.ts
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+build.log
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+ENV/
+env/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# C/C++ / IoT build outputs
+.clangd/
+*.o
+*.obj
+*.elf
+*.bin
+*.hex
+*.a
+*.lib
+.pio/
+.pioenvs/
+.piolibdeps/
+
+# IDE and Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db

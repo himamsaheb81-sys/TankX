@@ -1,0 +1,23 @@
+{
+  "name": "tankx-workspace",
+  "version": "1.0.0",
+  "description": "TankX Smart Fuel Tank Protection Enterprise System",
+  "scripts": {
+    "dev": "npx concurrently \"npm --prefix server run dev\" \"npm --prefix client run dev\"",
+    "build": "npm --prefix client install && npm --prefix client run build",
+    "start": "node server/index.js",
+    "client": "npm --prefix client run dev",
+    "server": "node server/index.js",
+    "server:dev": "npm --prefix server run dev",
+    "frontend": "npm --prefix frontend run dev",
+    "greet": ".venv\\Scripts\\python.exe backend/main.py",
+    "backend:py": ".venv\\Scripts\\python.exe backend/main.py --server",
+    "dev:full": "npx concurrently \"npm --prefix server run dev\" \"npm --prefix frontend run dev\" \"npm run backend:py\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1"
+  },
+  "dependencies": {
+    "mongodb": "^7.6.0"
+  }
+}

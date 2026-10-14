@@ -1,0 +1,8 @@
+﻿# TankX - Python Backend Dependencies
+# Course: Full Stack Development with Python (FastAPI + React)
+
+fastapi>=0.110.0
+uvicorn[standard]>=0.28.0
+pydantic>=2.6.0
+python-multipart>=0.0.9
+requests>=2.31.0

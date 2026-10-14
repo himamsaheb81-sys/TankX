@@ -1,0 +1,103 @@
+{
+  "GET /api/health": {
+    "status": 200,
+    "body": {
+      "status": "ONLINE",
+      "code": 0,
+      "system": "TankX.com 24/7 Unified Server (Port 3000)",
+      "port": 3000,
+      "version": "v1.0.0-PROD"
+    }
+  },
+  "GET /api/cloud/status": {
+    "status": 200,
+    "body": {
+      "status": "24/7 CLOUD ACTIVE",
+      "code": 0,
+      "serverPort": 3000,
+      "healthScore": "100% EXCELLENT",
+      "cloudProvider": "TankX Cloud Enterprise Gateway"
+    }
+  },
+  "GET /api/vehicles": {
+    "status": 200,
+    "body": [
+      {
+        "id": "vh-001",
+        "name": "Tata Signa 4825.TK Heavy Hauler",
+        "licensePlate": "MH-12-RN-9941",
+        "driverName": "Rajesh Kumar",
+        "driverPhone": "+91 98230 44120",
+        "currentFuelPercent": 76.5,
+        "currentFuelLiters": 344.25,
+        "tankCapacityLiters": 450,
+        "fuelType": "Diesel (BS-VI)",
+        "threatScore": 12,
+        "status": "SECURE",
+        "batteryVoltage": 12.8,
+        "temperatureC": 24.5,
+        "vibrationLevel": 0.1,
+        "sirenActive": false
+      },
+      {
+        "id": "vh-002",
+        "name": "BharatBenz 3528C Mining Tipper",
+        "licensePlate": "KA-04-E-7822",
+        "driverName": "Sunil Verma",
+        "driverPhone": "+91 94481 22390",
+        "currentFuelPercent": 34.0,
+        "currentFuelLiters": 129.2,
+        "tankCapacityLiters": 380,
+        "fuelType": "Diesel (BS-VI)",
+        "threatScore": 68,
+        "status": "WARNING",
+        "batteryVoltage": 13.5,
+        "temperatureC": 31.2,
+        "vibrationLevel": 1.2,
+        "sirenActive": false
+      }
+    ]
+  },
+  "GET /api/alerts": {
+    "status": 200,
+    "body": [
+      {
+        "id": "alt-001",
+        "vehicleId": "vh-002",
+        "severity": "HIGH",
+        "type": "VIBRATION_SPIKE",
+        "message": "Heavy drilling vibration pattern detected near lower tank wall.",
+        "resolved": false
+      }
+    ]
+  },
+  "GET /api/devices": {
+    "status": 200,
+    "body": {
+      "success": true,
+      "count": 2,
+      "data": [
+        {
+          "deviceId": "ESP32-TX-001",
+          "vehicleId": "vh-001",
+          "deviceName": "Tata Signa IoT Hub",
+          "status": "ONLINE"
+        },
+        {
+          "deviceId": "ESP32-TX-002",
+          "vehicleId": "vh-002",
+          "deviceName": "BharatBenz IoT Hub",
+          "status": "ONLINE"
+        }
+      ]
+    }
+  },
+  "GET /api/storage/status": {
+    "status": 200,
+    "body": {
+      "success": true,
+      "status": "CLOUD_CDN_STANDBY",
+      "provider": "Google Cloud Storage (GCS) / Firebase Storage"
+    }
+  }
+}
